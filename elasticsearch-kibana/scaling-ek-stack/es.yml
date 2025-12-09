@@ -22,12 +22,12 @@ spec:
               - key: kubernetes.io/hostname
                 operator: In
                 values:
-                - controlplane
-                - node01
-                - node02
+                - elastic-lab-3n 
+                - elastic-lab-3n-m02
+                - elastic-lab-3n-m03
       containers:
       - name: elasticsearch
-        image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+        image: docker.elastic.co/elasticsearch/elasticsearch:9.2.2
         ports:
         - containerPort: 9200
           name: port1
